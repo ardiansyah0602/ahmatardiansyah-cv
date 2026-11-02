@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHMAT ARDIANSYAH CV</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d1b;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #101a30;
+    box-shadow: 0 3px 15px #0005;
+}
+
+nav h2 {
+    color: #00d9ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 550px;
+    animation: slide 1.2s ease;
+}
+
+.hero-content h3 {
+    color: #00d9ff;
+    font-size: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.hero-content h1 span {
+    color: #00d9ff;
+}
+
+.hero-content p {
+    color: #b8c4d9;
+    line-height: 1.8;
+}
+
+.profile {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00d9ff;
+    box-shadow: 0 0 35px #00d9ff66;
+    animation: floating 3s infinite;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00d9ff;
+    color: #080d1b;
+    border-radius: 30px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* SECTION */
+section {
+    padding: 80px 8%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.heading span {
+    color: #00d9ff;
+}
+
+.card {
+    background: #111d35;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #263c5c;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #00d9ff;
+    box-shadow: 0 0 20px #00d9ff22;
+}
+
+.card h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #c4ccda;
+    line-height: 1.9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* SKILL */
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill p {
+    margin-bottom: 10px;
+}
+
+.bar {
+    background: #263c5c;
+    height: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background: linear-gradient(90deg, #006eff, #00e5ff);
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #101a30;
+    text-align: center;
+    padding: 25px;
+    color: #aab5c8;
+}
+
+/* ANIMATION */
+@keyframes floating {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media(max-width:700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .profile {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media print {
+    nav, .button {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .card {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+
+    .card p {
+        color: black;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>MY PORTFOLIO</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skill">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h3>HELLO, I'M</h3>
+
+        <h1>
+            YOUR <span>AHMAT ARDIANSYAH</span>
+        </h1>
+
+        <h3>Student | Programmer | Designer | Jaringan</h3>
+
+        <p>
+            Selamat datang di website CV pribadi saya.
+            Saya adalah seseorang yang memiliki semangat
+            belajar, kreativitas, dan ketertarikan
+            terhadap perkembangan teknologi.
+        </p>
+
+        <a href="#about" class="button">Explore Profile</a>
+        <button onclick="window.print()" class="button">
+            Download / Print CV
+        </button>
+    </div>
+
+    <img
+src="profil.jpg"
+class="profile"
+alt="Foto Profil">
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+
+    <div class="card">
+        <h3>Personal Information</h3>
+        <p>
+            Nama Lengkap : AHMAT ARDIANSYAH<br>
+            Tempat Lahir : Cirebon<br>
+            Tanggal Lahir : 06 Februari 2009<br>
+            Jenis Kelamin : LAKI - LAKI<br>
+            Alamat : Blok pukulen timur rt 10 rw 05<br>
+            Agama : Islam<br>
+            Status : Pelajar<br>
+            Email : ahmatardiansya.h06gmail.com
+        </p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2 class="heading">My <span>Education</span></h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>SD</h3>
+            <p>SDN CIPETE SELATAN 01</p>
+            <p>2015 - 2021</p>
+        </div>
+
+        <div class="card">
+            <h3>SMP</h3>
+            <p>MTSN 5 CIREBON</p>
+            <p>2021 - 2024</p>
+        </div>
+
+        <div class="card">
+            <h3>SMK</h3>
+            <p>SMKS PGRI 1 PALIMANAN</p>
+            <p>Tekhnik Komputer Jaringan</p>
+            <p>2024 - 2027</p>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2 class="heading">My <span>Experience</span></h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Pengalaman Kerja</h3>
+            <p>Fresh Graduate Hanya Teknisi Magang</p>
+        </div>
+
+        <div class="card">
+            <h3>Pengalaman PKL</h3>
+            <p>Saya Pernah Pkl Di Vidcom Computer Cirebon</p>
+            <p>Teknisi Magang</p>
+        </div>
+
+        <div class="card">
+            <h3>Sertifikat</h3>
+            <p>Sertifikat Teknisi magang</p>
+            <p>Sertifikat ID NETWOKERS</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skill">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="card">
+
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar">
+                <div class="progress" style="width:80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar">
+                <div class="progress" style="width:75%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar">
+                <div class="progress" style="width:50%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Computer Networking</p>
+            <div class="bar">
+                <div class="progress" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Designer</p>
+            <div class="bar">
+                <div class="progress" style="width:69%"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+ <!-- GALERI SERTIFIKAT -->
+<section id="certificate">
+
+    <h2 class="heading">
+        My <span>Certificates</span>
+    </h2>
+
+    <div class="certificate-container">
+
+        <div class="card certificate-card">
+            <img src="sertifikat1.jpg" alt="Sertifikat 1">
+            <h3>Sertifikat PKL</h3>
+            <button class="button"
+            onclick="window.open('sertifikat1.jpg','_blank')">
+                Lihat Sertifikat
+            </button>
+        </div>
+
+        <div class="card certificate-card">
+            <img src="sertifikat2.jpg" alt="Sertifikat 2">
+            <h3>DAFTAR NILAI</h3>
+            <button class="button"
+            onclick="window.open('sertifikat2.jpg','_blank')">
+                Lihat Sertifikat
+            </button>
+        </div>
+
+        <div class="card certificate-card">
+            <img src="sertifikat3.jpg" alt="Sertifikat 3">
+            <h3>Sertifikat ID NETWOKERS</h3>
+            <button class="button"
+            onclick="window.open('sertifikat3.jpg','_blank')">
+                Lihat Sertifikat
+            </button>
+        </div>
+
+</section>
+    </div>
+</section>
+<section id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <div class="card contact">
+        <h3>Let's Connect!</h3>
+
+        <p>Email:
+            <a href="ahmatardiansya.h06gmail.com">
+                ahmatardiansya.h06gmail.com
+            </a>
+        </p>
+
+        <p>WhatsApp: 085793561806</p>
+
+    <p>Instagram: @xyh_ardiann</p>
+
+        <a href="ahmatardiansya.h06gmail.com" class="button">
+            Send Email
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© Ahmat Ardiansyah CV Website</p>
+    <p>Designed with HTML, CSS & JavaScript</p>
+</footer>
+
+</body>
+</html>
